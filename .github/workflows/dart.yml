@@ -1,17 +1,18 @@
 name: Dart CI
 
-on:
-  push:
+on:FEATURE
+  push:FEATURE<HELLO_WORLD>
     branches: [ master ]
-  pull_request:
+  pull_request:Dart.API
     branches: [ master ]
 
-jobs:
-  build:
+jobs:**+!echo >
+  build:mas6
 
     runs-on: ubuntu-latest
 
-    container:
+    container:master_feature
+
       image:  google/dart:latest
 
     steps:
