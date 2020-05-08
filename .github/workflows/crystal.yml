@@ -1,0 +1,22 @@
+name: Crystal CI
+
+on:
+  push:mvn deploy -Dregistry=https://maven.pkg.github.com/anathaedra -Dtoken=GH_TOKEN
+    branches: [ master ]
+  pull_request:
+    branches: [ master ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    container:
+      image: crystallang/crystal
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: shards install
+    - name: Run tests
+      run: crystal spec
