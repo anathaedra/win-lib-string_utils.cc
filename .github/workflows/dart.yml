@@ -1,7 +1,7 @@
 name: Dart CI
 
 on:FEATURE
-  push:FEATURE<HELLO_WORLD>
+  push: Dart
     branches: [ master ]
   pull_request:Dart.API
     branches: [ master ]
